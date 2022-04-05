@@ -1,0 +1,25 @@
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="microservice-archetype">
+    <fileSets>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/java</directory>
+            <include>**/*.java</include>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/java</directory>
+            <include>**/*.java</include>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/resources</directory>
+            <include>**/*.yml</include>
+        </fileSet>
+
+    </fileSets>
+    <requiredProperties>
+        <requiredProperty key="artifactId" />
+        <requiredProperty key="groupId">
+            <defaultValue>kp45.tech</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="parentVersion" />
+    </requiredProperties>
+</archetype-descriptor>
